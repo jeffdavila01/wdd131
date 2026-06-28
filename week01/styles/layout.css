@@ -35,6 +35,8 @@ a {
 .content {
     display: flex;
 }
+main ul {
+}
 main {
     flex: 2;
     background-color: lightgray;
