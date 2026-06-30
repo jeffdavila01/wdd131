@@ -1,3 +1,5 @@
+
+ 
 const full = document.querySelector("#full");
 const worldfull =
 document.querySelector("#world-full");
@@ -7,8 +9,8 @@ const day = document.querySelector("#day");
 const short = document.querySelector("#short")
 const medium = document.querySelector("#medium")
 
-
 function updateDateTime(){
+    full.textContent = "Last Modified:" + document.lastModified;
 const today = new Date();
 
 full.innerHTML = `Last Modification: <span
@@ -20,7 +22,7 @@ class="highlight">${new Intl.DateTimeFormat(
     hour12: false
 }
 ).format(today)}
-</span`;
+</span>`;
  
 }
 
