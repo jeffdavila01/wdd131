@@ -8,10 +8,11 @@ const month = document.querySelector("#month");
 const day = document.querySelector("#day");
 const short = document.querySelector("#short")
 const medium = document.querySelector("#medium")
+const currentyear = document.querySelector("#currentyear");
+currentyear.textContent = new Date ().getFullYear();
 
 function updateDateTime(){
-    full.textContent = "Last Modified:" + document.lastModified;
-const today = new Date();
+    const lastModified = new Date(document.lastModified);
 
 full.innerHTML = `Last Modification: <span
 class="highlight">${new Intl.DateTimeFormat(
@@ -21,9 +22,9 @@ class="highlight">${new Intl.DateTimeFormat(
     timeStyle: "medium",
     hour12: false
 }
-).format(today)}
+).format(lastModified)}
 </span>`;
  
 }
 
-setInterval(updateDateTime, 1000);
+updateDateTime();
