@@ -49,6 +49,7 @@ nav {
     background-color: var(--primary-color);
     z-index: 10;
 }
+
 .menu.open {
     display: block;
 }

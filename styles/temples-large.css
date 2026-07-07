@@ -16,7 +16,7 @@
         background-color: transparent;
     }
 
-    .menu ul {
+    nav ul {
         display: flex;
         gap: 1rem;
     }
