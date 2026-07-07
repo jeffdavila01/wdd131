@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header,main, footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #141617;
+    
+    
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+    background-color: #fff;
+}
+header, footer {
+    text-align: center;
+    color: #fff;
+}
+p {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    text-decoration: underline;
+    color: #2680c5;
+}
+p:hover {
+    display: inline-block;
+}
+li {
+    list-style-type: none;
+    padding: 0.5rem;
+    
+}

@@ -1,0 +1,119 @@
+:root {
+    --primary-color: #1b3a5c;
+    --secondary-color: #d4af37;
+    --light-color: #f4f4f4;
+    --dark-color: #222;
+    --white: #ffffff;
+    --font-main: 'Roboto', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: var(--font-main);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.5;
+}
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    position: relative;
+}
+header h1 {
+    font-size: 1.3rem;
+}
+
+#menu-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 75%;
+    right: 0;
+    background-color: var(--primary-color);
+    z-index: 10;
+}
+.menu.open {
+    display: block;
+}
+.menu ul li {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.menu ul li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--white);
+    text-decoration: none;
+}
+.menu ul li a:hover, .menu ul li a:focus {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+main {
+    padding: 1rem;
+}
+main > h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+figure {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+figcaption {
+    padding: 0.6rem;
+    text-align: center;
+}
+figcaption a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+figcaption a:hover, 
+figcaption a:focus {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+footer p {
+    margin: 0.25rem 0;
+}
+#full, #clock {
+    display: inline-flex;
+    color: var(--secondary-color);
+    
+}

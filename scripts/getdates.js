@@ -1,14 +1,13 @@
 
  
 const full = document.querySelector("#full");
-const worldfull =
-document.querySelector("#world-full");
+const worldfull = document.querySelector("#world-full");
 const year = document.querySelector("#year");
 const month = document.querySelector("#month");
 const day = document.querySelector("#day");
 const short = document.querySelector("#short")
 const medium = document.querySelector("#medium")
-const currentyear = document.querySelector("#currentyear");
+const currentYear = document.querySelector("#currentyear");
 currentyear.textContent = new Date ().getFullYear();
 
 function updateDateTime(){
