@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1b3a5c;
-    --secondary-color: #d4af37;
+    --secondary-color: #f7cd46;
     --light-color: #f4f4f4;
     --dark-color: #222;
     --white: #ffffff;
@@ -44,7 +44,7 @@ nav {
     display: none;
     position: absolute;
     top: 100%;
-    left: 75%;
+    left: 0;
     right: 0;
     background-color: var(--primary-color);
     z-index: 10;
@@ -101,7 +101,7 @@ figcaption a {
 figcaption a:hover, 
 figcaption a:focus {
     text-decoration: underline;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 footer {
     background-color: var(--primary-color);
