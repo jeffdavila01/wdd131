@@ -1,0 +1,38 @@
+@media (max-width: 700px) {
+ header h1 {
+    font-size: 1.4rem;
+ }
+ .hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+ }
+ .hero img {
+    height: 260px;
+    order: 0;
+ }
+ .card {
+    background-color: #E5E7EB;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    font-size: 0.85rem;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #E5E7EB;
+    flex-shrink: 0;
+ }
+ .data-card {
+    order: 2;
+ }
+ .card li {
+    font-size: 0.8rem;
+ }
+ .card h2 {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+ }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Country Page</title>
+    <meta name="description" content="The Country Page, this page it shows the data of the country and the weather">
+    <meta name="author" content="Jeffrey Davila">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place_mobile.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Metro Manila</h1>
+    </header>
+    <main>
+        <section class="hero">
+
+            <img src="images/metromanila.webp" alt="">
+
+            <article class="card data-card">
+                <h2>Data</h2>
+
+                <ul>
+                    <li><strong>Area:</strong> 619.57 sq km</li>
+                    <li><strong>Population:</strong> 14,001,751 (2024 estimate)</li>
+                    <li><strong>Capital:</strong> Manila</li>
+                    <li><strong>Country:</strong> Philippines</li>
+                    <li><strong>Region:</strong> National Capital Region (NCR)</li>
+                    <li><strong>Languages:</strong> Filipino, English</li>
+                    <li><strong>Currency:</strong> Philippine Peso (PHP)</li>
+                    <li><strong>Time Zone:</strong> Philippine Standard Time (UTC+8)</li>
+                    <li><strong>Calling Code:</strong> +63</li>
+                    <li><strong>Internet TLD:</strong> .ph</li>
+
+
+                </ul>
+            </article>
+            <article class="card weather-card">
+                <h2>Weather ⛅ </h2>
+
+                <ul>
+                    <li><strong>Temperature:</strong><span id="temperature"></span></li>
+                    <li><strong>Condition:</strong><span id="condition"></span></li>
+                    <li><strong>Wind:</strong><span id="wind"></span></li>
+                    <li><strong>Wind chill:</strong> <span id="windchill"></span></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jeffrey Davila 😊 Philippines, Metro Manila, Navotas City </p>
+        <p id="full"></p>
+        <p id="clock"></p>
+    </footer>
+
+</body>
+
+</html>
