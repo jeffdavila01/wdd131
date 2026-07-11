@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media (min-width: 768px) {
 
     header {
@@ -61,4 +62,69 @@
     main {
         grid-template-columns: repeat(4, 1fr);
     }
+=======
+@media (min-width: 768px) {
+
+    header {
+        padding: 1rem 2rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        position: static;
+        background-color: transparent;
+    }
+    nav {
+        display: flex;
+        position: static;
+        background-color: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    .menu ul li a {
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+    }
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    main > h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    main > h2 {
+        grid-column: 1 / -1;
+    }
+    figure {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    figure img {
+        height: 220px;
+        object-fit: cover;
+    }
+}
+@media (min-width: 1200px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+>>>>>>> 097c7c55d6e8dcd4cd78d58282d4c22fe6ce8ed7
 }
