@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place_mobile.css">
-    <script src="scripts/places.js
-    " defer></script>
+    <script src="scripts/places.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +22,9 @@
     <main>
         <section class="hero">
 
-            <img src="images/metromanila.webp" alt="">
+            <source media="(max-width: 700px)" srcset="images/metromanila-mobile.webp">
+            <source media="(max-width: 1200px)" srcset="images/metromanila-tablet.webp">
+            <img src="images/metromanila.webp" alt="Philippines Metro Manila">
 
             <article class="card data-card">
                 <h2>Data</h2>
@@ -44,7 +45,12 @@
                 </ul>
             </article>
             <article class="card weather-card">
-                <h2>Weather ⛅ </h2>
+                <h2>Weather <svg class="icon-accent" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" stroke-width="2"
+                            stroke-linejoin="round" />
+                    </svg>
+                </h2>
 
                 <ul>
                     <li><strong>Temperature:</strong><span id="temperature"></span></li>

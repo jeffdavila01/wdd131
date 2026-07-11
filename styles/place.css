@@ -72,10 +72,18 @@ header h1 {
     border-radius: 6px;
     margin: 9px 20px 1px -10px;
 }
+.card h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: var(--secondary-color);
+    margin-top: 3px;
+}
 
 .card ul {
     list-style: none;
-    padding: 0.75 1rem 1rem 1rem;
+    padding: 0.75rem 1rem 1rem 1rem;
 }
 .card li {
     font-size: 0.6rem;
