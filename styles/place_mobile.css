@@ -27,6 +27,9 @@
  .data-card {
     order: 2;
  }
+ .weather-card {
+   order: 3;
+ }
  .card li {
     font-size: 0.8rem;
  }
@@ -34,5 +37,12 @@
     margin: 0;
     border-radius: 0;
     width: 100%;
+ }
+ .card h2 svg {
+   display: inline;
+ }
+ .card h2::after {
+   content: "";
+   display: none;
  }
 }

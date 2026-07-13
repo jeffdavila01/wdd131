@@ -55,25 +55,29 @@ header h1 {
 }
 .card {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     box-shadow: 0 4px 12px var(--shadow-color);
-    width: 250px;
+    width: 290px;
     min-width: 200px;
     overflow: visible;
     max-height: none;
 }
  .card h2 {
-    background-color: rgba(11, 60, 93, 0.9);
+    background-color: rgba(11, 60, 93, 1);
     color: var(--heading-color);
     padding: 0.75rem 1rem;
     font-size: 1.1rem;
     border-radius: 6px;
     margin: 9px 20px 1px -10px;
 }
+.card h2 svg {
+    display: none;
+}
 .card h2::after {
-    content: "";
+    content: "☀️";
+    margin-left: 6px;
     display: block;
     width: 40px;
     height: 1px;
@@ -86,10 +90,9 @@ header h1 {
     padding: 0.75rem 1rem 1rem 1rem;
 }
 .card li {
-    font-size: 0.6rem;
-    padding: 0.3rem 0;
+    font-size: 0.75rem;
+    padding: 0.1rem 0;
     display: flex;
-    justify-content: space-around;
     gap: 0.5rem;
     color: var(--text-color);
     justify-content: center;

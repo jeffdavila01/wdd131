@@ -1,20 +1,21 @@
+function calculateWindChill(tempF, windMph) {
+    return Math.round(35.74 + (0.6215 * tempF) - (35.75 * Math.pow(windMph, 0.16)) + (0.4275 * tempF * Math.pow(windMph, 0.16)));
+
+}
+
 function updateWeatherDisplay(data) {
-    const { tempF, condition, windMph } = data;
+    const {tempF, condition, windMph} = data;
 
     document.getElementById('temperature').textContent = `${tempF}°F`;
     document.getElementById('condition').textContent = condition;
     document.getElementById('wind').textContent = `${windMph} mph`;
-    document.getElementById('windchill').textContent = `${calculateWindChill(tempF, windMph)}°F`;
-}
 
-function calculateWindChill(tempF, windMph) {
-    if (tempF > 50 || windMph < 3) {
-        return tempF;
+    const windchillEl = document.getElementById('windchill');
+    if (tempF <= 50 && windMph >= 3) {
+        windchillEl.textContent = `${calculateWindChill(tempF, windMph)}°F`;
+    } else {
+        windchillEl.textContent = `${tempF}°F`;
     }
-    const windChill = 35.74 + (0.6215 * tempF)
-        - (35.75 * Math.pow(windMph, 0.16))
-        + (0.4275 * tempF * Math.pow(windMph, 0.16));
-    return Math.round(windChill);
 }
 
 async function fetchWeatherData(apiUrl) {
@@ -34,15 +35,14 @@ async function fetchWeatherData(apiUrl) {
         updateWeatherDisplay(weatherData);
     } catch (error) {
         console.error('Failed to fetch weather data:', error);
-    }  
+    }
 }
 
 function startLiveWeatherUpdates(apiUrl, intervalMs = 600000) {
     fetchWeatherData(apiUrl);
     setInterval(() => fetchWeatherData(apiUrl), intervalMs);
 }
-
-updateWeatherDisplay({ tempF: 28, condition: 'Partly Cloudy', windMph: 15});
+updateWeatherDisplay({tempF: 28, condition: 'Partly Cloudly', windMph: 15 });
 
 const currentYear = document.getElementById("currentyear");
 const full = document.getElementById("full");
