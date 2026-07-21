@@ -1,96 +1,5 @@
 
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Temple Albums</title>
-    <meta name="description" content="Browse a collection of temple albums featuring old, new, large, and small temples from around the world.">
-    <meta name="author" content="Jeffrey Davila">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Temple Album</h1>
-        <button id="menu-toggle">☰</button>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="old.html">Old</a></li>
-                <li><a href="new.html">New</a></li>
-                <li><a href="large.html">Large</a></li>
-                <li><a href="small.html">Small</a></li>
-            </ul>
-        </nav>
-
-    </header>
-    <main>
-        <h2>Home</h2>
-        <figure>
-            <img src="images/bacolod_philippines_temple.jpg" alt="bacolod philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/bacolod-philippines-temple?lang=eng">Bacolod Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/cebu_philippines_temple.jpg" alt="cebu philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/cebu-philippines-temple?lang=eng">Cebu Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/manila_philippines_temple.jpg" alt="manila philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple?lang=eng">Manila Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/davao_philippines_temple.jpg" alt="davao philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/davao-philippines-temple?lang=eng">Davao Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/urdaneta_temple.jpg" alt="urdaneta philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/urdaneta-philippines-temple?lang=eng">Urdaneta Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/saltlake_temple.jpg" alt="salt lake utah temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/salt-lake-city-utah-temple?lang=eng">Salt Lake Utah Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/nauvoo_temple.jpg" alt="nauvoo illinois temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/nauvoo-illinois-temple?lang=eng">Nauvoo Illinois Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/bountiful_temple.jpg" alt="bountiful utah temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/bountiful-utah-temple?lang=eng">Bountiful Utah Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/tokyo_japan_temple.jpg" alt="tokyo japan temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/tokyo-japan-temple?lang=eng">Tokyo Japan Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/seoul_korea_temple.jpg" alt="Seoul Korea Temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/seoul-korea-temple?lang=eng">Seoul South Korea Temple</a></figcaption>
-        </figure>
-
-    </main>
-    <footer>
-        <p> &copy; <span id="currentyear"></span> 😊 Jeffrey Papauran Davila 😊 Philippines, Metro Manila, Navotas City</p>
-        <p id="full"></p>
-        <p id="clock"></p>
-    </footer>
-    
-</body>
-=======
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -101,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/temples-mobile.css">
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <header>
@@ -111,66 +21,19 @@
         <button id="menu-toggle">☰</button>
         <nav class="menu" id="menu">
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="old.html">Old</a></li>
-                <li><a href="new.html">New</a></li>
-                <li><a href="large.html">Large</a></li>
-                <li><a href="small.html">Small</a></li>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
 
     </header>
     <main>
-        <h2>Home</h2>
-        <figure>
-            <img src="images/bacolod_philippines_temple.jpg" alt="bacolod philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/bacolod-philippines-temple?lang=eng">Bacolod Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/cebu_philippines_temple.jpg" alt="cebu philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/cebu-philippines-temple?lang=eng">Cebu Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/manila_philippines_temple.jpg" alt="manila philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple?lang=eng">Manila Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/davao_philippines_temple.jpg" alt="davao philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/davao-philippines-temple?lang=eng">Davao Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/urdaneta_temple.jpg" alt="urdaneta philippines temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/urdaneta-philippines-temple?lang=eng">Urdaneta Philippines Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/saltlake_temple.jpg" alt="salt lake utah temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/salt-lake-city-utah-temple?lang=eng">Salt Lake Utah Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/nauvoo_temple.jpg" alt="nauvoo illinois temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/nauvoo-illinois-temple?lang=eng">Nauvoo Illinois Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/bountiful_temple.jpg" alt="bountiful utah temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/bountiful-utah-temple?lang=eng">Bountiful Utah Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/tokyo_japan_temple.jpg" alt="tokyo japan temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/tokyo-japan-temple?lang=eng">Tokyo Japan Temple</a></figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/seoul_korea_temple.jpg" alt="Seoul Korea Temple">
-            <figcaption><a href="https://www.churchofjesuschrist.org/temples/details/seoul-korea-temple?lang=eng">Seoul South Korea Temple</a></figcaption>
-        </figure>
+        <h2 id='page-title'>Home</h2>
+        <div id='temples-container' class='temple-grid'></div>
+        
 
     </main>
     <footer>
@@ -180,5 +43,4 @@
     </footer>
     
 </body>
->>>>>>> 097c7c55d6e8dcd4cd78d58282d4c22fe6ce8ed7
 </html>
