@@ -84,10 +84,6 @@ main p {
     color: #444;
     max-width: 60ch;
 }
-.temple-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
 .temple-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
