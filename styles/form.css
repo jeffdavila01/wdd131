@@ -1,115 +1,244 @@
-/* ==========================
-   CSS Variables
-========================== */
-:root {
-    --primary-color: #003049;
-    --secondary-color: #d62828;
-    --background-color: #f4f7f8;
-    --surface-color: #ffffff;
-    --text-color: #222222;
-    --border-color: #bdbdbd;
-    --shadow-color: rgba(0, 0, 0, 0.15);
-
-    --font-family: Arial, Helvetica, sans-serif;
-    --border-radius: 8px;
-    --spacing: 1rem;
-}
-
+/* ========== RESET & BASE ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
-    font-family: var(--font-family);
-    background: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    background: #eef2f5;
+    color: #2c3e50;
+    padding: 20px;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
+/* ========== HEADER ========== */
 header {
-    background: var(--primary-color);
-    color: white;
     text-align: center;
-    padding: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    background: #1a1a2e;
+    border-radius: 10px;
 }
 
-
-main {
-    max-width: 650px;
-    margin: 2rem auto;
-    background: var(--surface-color);
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 10px var(--shadow-color);
+header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: #e94560;
+    letter-spacing: 2px;
 }
 
-
+/* ========== FORM ========== */
 form {
-    display: grid;
-    gap: var(--spacing);
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
 
-label,
-legend {
-    font-weight: bold;
+/* Standard labels & inputs */
+label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    color: #1a1a2e;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-
-input,
+input[type="text"],
+input[type="date"],
 select,
 textarea {
     width: 100%;
-    padding: .8rem;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    background: #fafafa;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e94560;
+    background: #fff;
 }
 
 textarea {
-    min-height: 120px;
+    min-height: 100px;
     resize: vertical;
 }
 
-
-fieldset {
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 1rem;
+/* ========== RATING: Label above, Radio below, in a row ========== */
+.rating-group {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+    background: #fafafa;
 }
 
-fieldset label {
-    display: block;
-    margin: .5rem 0;
+.rating-group legend {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    padding: 0 8px;
+    color: #1a1a2e;
+    text-transform: uppercase;
 }
 
-
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: .5rem;
+/* Flex row of star columns */
+.rating-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 0.5rem;
 }
 
-input[type="submit"] {
-    background: var(--secondary-color);
-    color: white;
-    border: none;
+/* Each star option: label on top, radio below */
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background .3s ease;
+}
+
+.rating-option label {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #f39c12;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.rating-option:hover label {
+    transform: scale(1.2);
+}
+
+.rating-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #e94560;
+    cursor: pointer;
+}
+
+/* ========== FEATURES: Full-width rows ========== */
+.features-group {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+    background: #fafafa;
+}
+
+.features-group legend {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    padding: 0 8px;
+    color: #1a1a2e;
+    text-transform: uppercase;
+}
+
+.features-hint {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Each checkbox row stretches full width */
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.feature-row:hover {
+    border-color: #e94560;
+    box-shadow: 0 2px 8px rgba(233,69,96,0.1);
+}
+
+.feature-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #e94560;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.feature-row label {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #333;
+    cursor: pointer;
+    flex: 1;
+    font-size: 1rem;
+}
+
+/* ========== SUBMIT ========== */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 1.5rem;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 input[type="submit"]:hover {
-    background: var(--primary-color);
+    background: #c23a51;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233,69,96,0.3);
 }
 
-
+/* ========== FOOTER ========== */
 footer {
-    background: var(--primary-color);
-    color: white;
     text-align: center;
-    padding: 1rem;
     margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+#lastModified {
+    color: #e94560;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 480px) {
+    form { padding: 1.2rem; }
+    .rating-row { gap: 6px; }
+    .rating-option label { font-size: 1rem; }
 }
