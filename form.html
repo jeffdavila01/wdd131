@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Product Reviw</title>
+    <meta name="author" content="Jeffrey Davila">
+    <meta name="description" content="This page is for - on how the product review by the customer who bought.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+
+                <label>
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    ☆
+                </label>
+
+                <label>
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    ☆☆
+                </label>
+
+                <label>
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    ☆☆☆
+                </label>
+
+                <label>
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    ☆☆☆☆
+                </label>
+
+                <label>
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    ☆☆☆☆☆
+                </label>
+
+            </fieldset>
+
+
+            <!-- Installation Date -->
+            <label for="date">Date of Installation</label>
+            <input type="date" id="date" name="date" required>
+
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features</legend>
+
+                <label>
+                    <input type="checkbox" id="feature1" name="features" value="Durability">
+                    Durability
+                </label>
+
+                <label>
+                    <input type="checkbox" id="feature2" name="features" value="Ease of Use">
+                    Ease of Use
+                </label>
+
+                <label>
+                    <input type="checkbox" id="feature3" name="features" value="Performance">
+                    Performance
+                </label>
+
+                <label>
+                    <input type="checkbox" id="feature4" name="features" value="Design">
+                    Design
+                </label>
+
+            </fieldset>
+
+
+            <!-- Written Review -->
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
+
+
+            <!-- User Name -->
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username">
+
+
+            <!-- Submit -->
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
+
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Jeffrey Papauran Davila 😊 Philippines
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+
+    
+</body>
+</html>

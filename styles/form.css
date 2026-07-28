@@ -1,0 +1,115 @@
+/* ==========================
+   CSS Variables
+========================== */
+:root {
+    --primary-color: #003049;
+    --secondary-color: #d62828;
+    --background-color: #f4f7f8;
+    --surface-color: #ffffff;
+    --text-color: #222222;
+    --border-color: #bdbdbd;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+
+    --font-family: Arial, Helvetica, sans-serif;
+    --border-radius: 8px;
+    --spacing: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+
+main {
+    max-width: 650px;
+    margin: 2rem auto;
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+
+form {
+    display: grid;
+    gap: var(--spacing);
+}
+
+label,
+legend {
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .8rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+fieldset label {
+    display: block;
+    margin: .5rem 0;
+}
+
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: .5rem;
+}
+
+input[type="submit"] {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background .3s ease;
+}
+
+input[type="submit"]:hover {
+    background: var(--primary-color);
+}
+
+
+footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
