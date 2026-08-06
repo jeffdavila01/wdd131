@@ -10,16 +10,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/siteplan.css">
+    <link rel="stylesheet" href="styles/siteplans.css">
+    <link rel="stylesheet" href="styles/siteplans_view.css">
+    <script src="script/siteplans.js" defer></script>
 </head>
 
 <body>
 
     <header>
 
-        <img src="images/motogearlogo.jpg" alt="MotoGear Parts Philippines">
+        <div class="logo">
+            <img src="images/motogearlogo.jpg" alt="MotoGear Parts logo">
 
-        <h1>MotoGear Parts</h1>
+            <h1 >MotoGear Parts</h1>
+        </div>
+
+        <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="maintenance.html">Maintenance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
     </header>
 
