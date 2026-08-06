@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MotoGear Parts | Maintenance</title>
+
+    <meta name="author" content="Jeffrey Davila">
+    <meta
+        name="description"
+        content="Learn basic motorcycle maintenance practices and use the MotoGear interactive maintenance checklist."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/site.css">
+    <script src="scripts/site.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a class="brand" href="index.html">
+            <img src="images/motogearlogo.jpg" alt="MotoGear Parts logo">
+            <span>MotoGear Parts</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            ☰
+        </button>
+
+        <nav class="menu" id="main-menu" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a class="active" href="maintenance.html">Maintenance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="page-banner">
+        <p class="eyebrow">KEEP IT ROAD-READY</p>
+        <h1>Maintenance Guide</h1>
+        <p>
+            Simple inspection habits can help you identify problems
+            before they become bigger concerns.
+        </p>
+    </section>
+
+    <section class="section">
+
+        <div class="maintenance-grid">
+
+            <article class="maintenance-card">
+                <span>01</span>
+                <h2>Before Every Ride</h2>
+                <p>
+                    Check the tires, brakes, lights, mirrors, and
+                    general condition of the motorcycle before riding.
+                </p>
+            </article>
+
+            <article class="maintenance-card">
+                <span>02</span>
+                <h2>Engine Oil</h2>
+                <p>
+                    Check the oil level according to the motorcycle
+                    manufacturer's instructions and follow the recommended
+                    service interval.
+                </p>
+            </article>
+
+            <article class="maintenance-card">
+                <span>03</span>
+                <h2>Chain Care</h2>
+                <p>
+                    Keep the drive chain clean, properly lubricated,
+                    and adjusted according to manufacturer specifications.
+                </p>
+            </article>
+
+            <article class="maintenance-card">
+                <span>04</span>
+                <h2>Brake Inspection</h2>
+                <p>
+                    Pay attention to unusual noises, reduced braking
+                    performance, or visible signs of wear.
+                </p>
+            </article>
+
+            <article class="maintenance-card">
+                <span>05</span>
+                <h2>Tire Condition</h2>
+                <p>
+                    Check pressure, tread condition, and visible damage.
+                    Use the recommended tire pressure for your motorcycle.
+                </p>
+            </article>
+
+            <article class="maintenance-card">
+                <span>06</span>
+                <h2>Electrical System</h2>
+                <p>
+                    Confirm that headlights, brake lights, indicators,
+                    and other important electrical components operate correctly.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="checklist-section">
+
+        <div class="section-heading light-heading">
+            <p class="eyebrow">INTERACTIVE TOOL</p>
+            <h2>Maintenance Checklist</h2>
+            <p>
+                Check each item before your ride. Your progress is saved
+                in your browser.
+            </p>
+        </div>
+
+        <div class="checklist-box">
+
+            <div class="checklist-items">
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="tires"
+                    >
+                    <span>Check tire pressure and condition</span>
+                </label>
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="oil"
+                    >
+                    <span>Check engine oil</span>
+                </label>
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="brakes"
+                    >
+                    <span>Inspect brakes</span>
+                </label>
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="chain"
+                    >
+                    <span>Inspect chain and sprockets</span>
+                </label>
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="lights"
+                    >
+                    <span>Check headlights, brake lights, and signals</span>
+                </label>
+
+                <label class="check-item">
+                    <input
+                        type="checkbox"
+                        class="maintenance-check"
+                        value="mirrors"
+                    >
+                    <span>Check mirrors and riding visibility</span>
+                </label>
+
+            </div>
+
+            <div class="checklist-result">
+
+                <p id="checklist-status">
+                    0 of 6 tasks completed.
+                </p>
+
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+
+                <p id="checklist-message">
+                    Start your inspection before riding.
+                </p>
+
+                <button
+                    class="button"
+                    id="save-checklist"
+                    type="button"
+                >
+                    Save Checklist
+                </button>
+
+                <button
+                    class="text-button"
+                    id="clear-checklist"
+                    type="button"
+                >
+                    Clear Saved Checklist
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <div class="section-heading">
+            <p class="eyebrow">RIDE RESPONSIBLY</p>
+            <h2>Safety Reminders</h2>
+        </div>
+
+        <div class="safety-grid">
+
+            <article>
+                <h3>Helmet</h3>
+                <p>
+                    Wear an appropriate helmet that fits correctly and
+                    is suitable for motorcycle riding.
+                </p>
+            </article>
+
+            <article>
+                <h3>Protective Gear</h3>
+                <p>
+                    Consider gloves, protective clothing, and proper
+                    footwear appropriate for the ride.
+                </p>
+            </article>
+
+            <article>
+                <h3>Road Awareness</h3>
+                <p>
+                    Stay alert, maintain a safe following distance,
+                    and adjust your riding to traffic and road conditions.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div>
+            <h2>MotoGear Parts</h2>
+            <p>Ride Smart. Maintain Better.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="references.html">References</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+            <p>
+                &copy; <span id="current-year"></span> MotoGear Parts |
+                Jeffrey Davila
+            </p>
+            <p id="last-modified"></p>
+        </div>
+
+</footer>
+
+</body>
+</html>
